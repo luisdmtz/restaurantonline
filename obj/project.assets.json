@@ -9566,11 +9566,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ldionisi\\source\\repos\\restaurantonlinepro\\InduccionSemana4.csproj",
+      "projectUniqueName": "C:\\Users\\ldionisi\\source\\repos\\restaurantonline1\\InduccionSemana4.csproj",
       "projectName": "InduccionSemana4",
-      "projectPath": "C:\\Users\\ldionisi\\source\\repos\\restaurantonlinepro\\InduccionSemana4.csproj",
+      "projectPath": "C:\\Users\\ldionisi\\source\\repos\\restaurantonline1\\InduccionSemana4.csproj",
       "packagesPath": "C:\\Users\\ldionisi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ldionisi\\source\\repos\\restaurantonlinepro\\obj\\",
+      "outputPath": "C:\\Users\\ldionisi\\source\\repos\\restaurantonline1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ldionisi\\AppData\\Roaming\\NuGet\\NuGet.Config",
