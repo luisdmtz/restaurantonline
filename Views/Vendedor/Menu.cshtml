@@ -1,0 +1,79 @@
+﻿@model IEnumerable<InduccionSemana4.Models.Vendedor>
+
+
+@{
+    ViewData["Title"] = "Menu";
+}
+
+<h1>Menu Negocios</h1>
+<br />
+<form asp-action="Menu" method="get">
+    <div class="form-actions no-color">
+        <p>
+           <input type="text" name="SearchString" placeholder="Ingrega tu zona.." value="@ViewData["currentFilter"]" />
+            <input type="submit" style="font-weight: bold;" value="Buscar" class="btn btn-default" /> &nbsp;&nbsp;
+            <a asp-action="Menu"  class="btn btn-default"><strong>Lista Total</strong></a>
+        </p>
+    </div>
+</form>
+<br />
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ClaveVendedor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NombreNegocio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TitularNegocio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Direccion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Zona)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Telefono)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FotoNegocio)
+            </th>
+            <th>Opcion</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ClaveVendedor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NombreNegocio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TitularNegocio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Direccion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Zona)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Telefono)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FotoNegocio)
+            </td>
+            <td>
+                <!--<a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |-->
+                <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-success btn-sm">Ver menu</a> 
+                <!--<a asp-action="Delete" asp-route-id="@item.Id">Delete</a>-->
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

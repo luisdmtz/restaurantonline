@@ -1,0 +1,57 @@
+﻿@model IEnumerable<InduccionSemana4.Models.Pedido>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ClavePedido)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PrecioTotal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cantidad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ClienteId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductoId)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ClavePedido)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrecioTotal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cantidad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ClienteId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductoId)
+            </td>            
+            <td>
+                <!--<a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |-->
+                <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-success btn-sm">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-success btn-info">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

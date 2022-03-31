@@ -1,0 +1,66 @@
+﻿@model Vendedor
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+</head>
+<body>
+
+
+    <div class="text-center">
+        <div class="alert alert-success">
+            <h2 class="display-4">Inicie Sesion Por favor</h2>
+        </div>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-sm-4 offset-sm-4">
+
+            <form asp-controller="Sesion" asp-action="Index" method="post">
+
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Correo</label>
+                    <input type="text" class="form-control" asp-for="Correo">
+                </div>
+
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                    <input type="password" class="form-control" asp-for="Pwd">
+                </div>
+
+                <button type="submit" class="btn btn-primary">Ingresar</button>
+            </form>
+
+        </div>
+
+    </div>
+    
+    <br /> <br /> <br />
+
+    	<div class="container container-web-page" id="modal">
+	    <div class="row justify-content-md-center">
+	        <div class="w-100"></div>
+	        <div class="col-12 col-md-6">
+	            <h3 class="text-center text-uppercase poppins-regular font-weight-bold">Crea tu cuenta</h3>
+	            <p class="text-justify">
+	                Crea tu cuenta para poder realizar pedidos de diferentes platillos, es muy fácil y rápido.
+	            </p>
+	            <p class="text-center">
+	                <a href="Cliente/Create" class="btn btn-success" >Cliente</a>
+                    <a href="Vendedor/Create" class="btn btn-info" >Vendedor</a>
+	            </p>
+	        </div>
+	    </div>
+	</div>
+
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

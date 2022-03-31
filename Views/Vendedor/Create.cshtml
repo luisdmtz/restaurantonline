@@ -1,0 +1,195 @@
+﻿@model InduccionSemana4.Models.Vendedor
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+@*<h1>Create</h1>
+
+<h4>Vendedor</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ClaveVendedor" class="control-label"></label>
+                <input asp-for="ClaveVendedor" class="form-control" />
+                <span asp-validation-for="ClaveVendedor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NombreNegocio" class="control-label"></label>
+                <input asp-for="NombreNegocio" class="form-control" />
+                <span asp-validation-for="NombreNegocio" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TitularNegocio" class="control-label"></label>
+                <input asp-for="TitularNegocio" class="form-control" />
+                <span asp-validation-for="TitularNegocio" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Direccion" class="control-label"></label>
+                <input asp-for="Direccion" class="form-control" />
+                <span asp-validation-for="Direccion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Zona" class="control-label"></label>
+                <input asp-for="Zona" class="form-control" />
+                <span asp-validation-for="Zona" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Telefono" class="control-label"></label>
+                <input asp-for="Telefono" class="form-control" />
+                <span asp-validation-for="Telefono" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FotoNegocio" class="control-label"></label>
+                <input asp-for="FotoNegocio" class="form-control" />
+                <span asp-validation-for="FotoNegocio" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>*@
+
+
+
+<br />
+<p>
+    <a asp-action="SesionVendedor"  class="btn btn-default" style="font-size:1rem; float: right;"><strong>INICIAR SESION</strong></a>
+</p>
+
+	<div class="container container-web-page">
+	    <h3 class="font-weight-bold poppins-regular text-uppercase">Crear cuenta | Vendedor</h3>
+	    <div class="row">
+	        <div class="col-12">
+	            <form asp-action="Create" class="div-bordered" style="padding: 15px;">
+
+	                <fieldset>
+				        <legend><i class="far fa-address-card"></i> &nbsp; Información personal</legend>
+	                    <div class="container-fluid">
+	                        <div class="row">
+								<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+	                            <div class="col-12 col-md-6">
+	                                <div class="form-outline mb-4  form-group">
+	                                    <input asp-for="ClaveVendedor" type="text" pattern="[a-zA-Z0-9-]{7,30}" class="form-control"  maxlength="30">
+	                                    <label for="cliente_numero_documento" class="form-label">Clave Vendedor <i class="fab fa-font-awesome-alt"></i>
+										</label>
+										<span asp-validation-for="ClaveVendedor" class="text-danger"></span>
+	                                </div>
+	                            </div>
+
+	                            <div class="col-12 col-md-6">
+	                                <div class="form-outline mb-4  form-group">
+	                                    <input asp-for="NombreNegocio" type="text" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{4,35}" class="form-control" maxlength="35">
+	                                    <label for="cliente_nombre" class="form-label">Nombre Negocio <i class="fab fa-font-awesome-alt"></i>
+										</label>
+										<span asp-validation-for="NombreNegocio" class="text-danger"></span>
+	                                </div>
+	                            </div>
+
+	                            <div class="col-12 col-md-4">
+	                                <div class="form-outline mb-4  form-group">
+	                                    <input asp-for="TitularNegocio" type="text" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{4,35}" class="form-control" maxlength="35">
+	                                    <label for="cliente_apellido" class="form-label">Titular Negocio <i class="fab fa-font-awesome-alt"></i>
+										</label>
+										<span asp-validation-for="TitularNegocio" class="text-danger"></span>	
+	                                </div>
+	                            </div>
+
+								<div class="col-12 col-md-4">
+	                                <div class="form-outline mb-4 form-group">
+	                                    <input asp-for="Direccion"  type="text" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ().,#\- ]{4,70}" class="form-control" maxlength="70">
+	                                    <label for="cliente_direccion" class="form-label">Calle o dirección<i class="fab fa-font-awesome-alt"></i>
+										</label>
+										<span asp-validation-for="Direccion" class="text-danger"></span>
+	                                </div>
+	                            </div>
+
+	                            <div class="col-12 col-md-4">
+	                                <div class="form-outline mb-4 form-group">
+	                                    <input asp-for="Zona"  type="text" pattern="[0-9()+]{8,20}" class="form-control" maxlength="20">
+	                                    <label for="cliente_telefono" class="form-label">Zona <i class="fab fa-font-awesome-alt"></i>
+										</label>
+										<span asp-validation-for="Zona" class="text-danger"></span>	
+	                                </div>
+	                            </div>
+
+								<div class="col-12 col-md-4">
+	                                <div class="form-outline mb-4 form-group">
+	                                    <input asp-for="Telefono"  type="text" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ().,#\- ]{4,70}" class="form-control" maxlength="70">
+	                                    <label for="cliente_direccion" class="form-label">Telefono<i class="fab fa-font-awesome-alt"></i>
+										</label>
+										<span asp-validation-for="Telefono" class="text-danger"></span>
+	                                </div>
+	                            </div>
+
+                                <div class="col-12 col-md-4">
+	                                <div class="form-outline mb-4 form-group">
+	                                    <input asp-for="FotoNegocio"  type="text" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ().,#\- ]{4,70}" class="form-control" maxlength="70">
+	                                    <label for="cliente_direccion" class="form-label">Foto Negocio<i class="fab fa-font-awesome-alt"></i>
+										</label>
+										<span asp-validation-for="FotoNegocio" class="text-danger"></span>
+	                                </div>
+	                            </div>
+
+	                        </div>
+	                    </div>
+	                </fieldset>
+
+	                <br>
+
+	                <fieldset>
+	                    <legend><i class="fas fa-user-lock"></i> &nbsp; Información de inicio de sesión</legend>
+	                    <div class="container-fluid">
+	                        <div class="row">
+	                            <div class="col-12 col-md-4">
+	                                <div class="form-outline mb-4 form-group">
+	                                    <input asp-for="Correo" type="email" class="form-control" maxlength="47">
+	                                    <label for="cliente_email" class="form-label">Email <i class="fab fa-font-awesome-alt"></i>
+										   <span asp-validation-for="Correo" class="text-danger"></span>		
+										</label>
+	                                </div>
+	                            </div>
+	                            <div class="col-12 col-md-4">
+	                                <div class="form-outline mb-4">
+	                                    <input asp-for="Pwd" type="password" class="form-control" maxlength="100" >
+	                                    <label for="cliente_clave_1" class="form-label">Contraseña <i class="fab fa-font-awesome-alt"></i>
+										 <span asp-validation-for="Pwd" class="text-danger"></span>	
+										</label>
+	                                </div>
+	                            </div>
+
+	                            <!--<div class="col-12 col-md-4">
+	                                <div class="form-outline mb-4">
+	                                    <input type="password" class="form-control" name="cliente_clave_2_reg" id="cliente_clave_2" maxlength="100" >
+	                                    <label for="cliente_clave_2" class="form-label">Repetir contraseña <i class="fab fa-font-awesome-alt"></i></label>
+	                                </div>
+	                            </div>-->
+	                        </div>
+	                    </div>
+	                </fieldset>
+
+	                <p class="text-center form-group" style="margin-top: 30px;">
+	                    <button type="submit" class="btn btn-info btn-sm"><i class="far fa-paper-plane"></i> &nbsp; CREAR CUENTA</button>
+	                </p>
+	                <p class="text-center">
+	                    <small>Los campos marcados con <i class="fab fa-font-awesome-alt"></i> son obligatorios</small>
+	                </p>
+	            </form>
+	        </div>
+	    </div>
+	</div>
+
+
+
+
+<!--<div>
+    <a asp-action="Index">Back to List</a>
+</div>-->
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
